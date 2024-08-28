@@ -10,7 +10,7 @@ class GymApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "Gym App DotCode",
       home: WorkoutPage(),
     );
