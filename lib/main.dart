@@ -12,6 +12,7 @@ class GymApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Gym App DotCode",
+      debugShowCheckedModeBanner: false,
       home: WorkoutPage(),
     );
   }
