@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firstproject/models/index.dart';
+import 'package:flutter_firstproject/utils/myColors.dart';
 
 class WorkoutPage extends StatelessWidget {
   WorkoutPage({super.key});
@@ -27,19 +28,29 @@ class WorkoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: MyColors.redFla,
       appBar: AppBar(
-        title: Text(workout.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: const Color(0xFFFFFFff)), ),
+        title: Text(
+          workout.name,
+          style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+              color: const Color(0xFFFFFFff)),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.red,
+        backgroundColor: MyColors.redFla,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           if (kDebugMode) {
-            print("Clicou");
+            print("Clicked");
           }
         },
-        child: const Icon(Icons.add),
+        backgroundColor: Colors.white,
+        child: const Icon(
+          Icons.add,
+          color: MyColors.bottomGradientColor,
+        ),
       ),
       body: Container(
         margin: const EdgeInsets.all(8),
@@ -58,14 +69,16 @@ class WorkoutPage extends StatelessWidget {
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
+                          backgroundColor: MyColors.bottomGradientColor,
                           shape: const BeveledRectangleBorder()),
-                      child: const Text("Send Photo"),
+                      child: const Text("Send Photo", style: TextStyle(color: Colors.white),),
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
+                          backgroundColor: MyColors.bottomGradientColor,
                           shape: const BeveledRectangleBorder()),
-                      child: const Text("Remove Photo"),
+                      child: const Text("Remove Photo", style: TextStyle(color: Colors.white),),
                     )
                   ],
                 )),
@@ -108,7 +121,7 @@ class WorkoutPage extends StatelessWidget {
                       },
                       icon: const Icon(
                         Icons.delete,
-                        color: Colors.redAccent,
+                        color: MyColors.redFla,
                       )),
                 );
               }),

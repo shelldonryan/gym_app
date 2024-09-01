@@ -1,6 +1,4 @@
 import 'package:flutter_firstproject/pages/authetication.dart';
-
-import 'pages/index.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +10,7 @@ class GymApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: "Gym App DotCode",
       debugShowCheckedModeBanner: false,
       home: AuthenticationPage(),
